@@ -1,0 +1,20 @@
+diff --git a/packages/SystemUI/src/com/android/systemui/statusbar/StatusBarMobileView.java b/packages/SystemUI/src/com/android/systemui/statusbar/StatusBarMobileView.java
+index 0557b6c541a..8bdef30e501 100644
+--- a/packages/SystemUI/src/com/android/systemui/statusbar/StatusBarMobileView.java
++++ b/packages/SystemUI/src/com/android/systemui/statusbar/StatusBarMobileView.java
+@@ -352,13 +352,13 @@ public class StatusBarMobileView extends FrameLayout implements DarkReceiver,
+         mVisibleState = state;
+         switch (state) {
+             case STATE_ICON:
+-                if (mState == null || (mState.visible && mState.provisioned)) {
++                if (mState == null || (mState.visible /*&& mState.provisioned*/)) {
+                     mMobileGroup.setVisibility(View.VISIBLE);
+                     mDotView.setVisibility(View.GONE);
+                     break;
+                 }
+             case STATE_DOT:
+-                if (mState == null || (mState.visible && mState.provisioned)) {
++                if (mState == null || (mState.visible /*&& mState.provisioned*/)) {
+                     mMobileGroup.setVisibility(View.INVISIBLE);
+                     mDotView.setVisibility(View.VISIBLE);
+                     break;
